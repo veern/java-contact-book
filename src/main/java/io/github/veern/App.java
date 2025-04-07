@@ -1,13 +1,21 @@
 package io.github.veern;
 
-/**
- * Hello world!
- *
- */
+import java.util.Scanner;
+
 public class App
 {
+    private Scanner scnr = new Scanner(System.in);
+    private int status = 0;
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        App app = new App();
+        app.loop();
+    }
+
+    private int loop(){
+        Menu.helloMessage();
+        Menu.nextStep();
+        return status;
     }
 }
